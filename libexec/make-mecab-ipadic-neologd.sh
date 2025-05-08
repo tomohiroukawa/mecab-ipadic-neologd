@@ -97,7 +97,7 @@ if [ ! -e ${BASEDIR}/../build/${ORG_DIC_NAME}.tar.gz ]; then
 	TMP_IPADIC_HASH_VAL=`openssl sha1 ${BASEDIR}/../build/${ORG_DIC_NAME}.tar.gz | cut -d $' ' -f 2,2`
         if [ "${TMP_IPADIC_HASH_VAL}" != "0d9d021853ba4bb4adfa782ea450e55bfe1a229b" ]; then
             echo ""
-            echo "Hash value of ${BASEDIR}/../build/${ORG_DIC_NAME}.tar.gz don't match. Hash was ${TMP_IPADIC_HASH_VAL}"
+            echo "Hash value of ${BASEDIR}/../build/${ORG_DIC_NAME}.tar.gz don't match. Hash was '${TMP_IPADIC_HASH_VAL}'"
         else
             echo "Hash value of ${BASEDIR}/../build/${ORG_DIC_NAME}.tar.gz matched"
             break 1;
